@@ -1,2 +1,2 @@
-# giphy-api-app
-GIF Search App - Powered by GIPHY APY
+# GIF Search App - Powered by GIPHY API
+
