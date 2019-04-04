@@ -40,6 +40,18 @@ body {
     border: none;
 }
 
+.card2 {
+    margin-top: 10px;
+    background: #4E4E50;
+    border: none;
+}
+
 .upperCase {
     text-transform: uppercase;
+}
+
+.instructions {
+    font-size: 1.3rem;
+    color: #ffffff;
+    line-height: 1.5rem;
 }
