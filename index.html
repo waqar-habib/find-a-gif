@@ -9,18 +9,19 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <script src="./assets/javascript/app.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Signika+Negative" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">GIF SEARCH APP</h1>
-                <p class="lead">For All the GIF Images you could possibly imagine. </p>
-                <p class="lead">Powered by the popular GIPHY API</p>
+                <h1 class="display-4">FIND A GIF!</h1>
+                <p class="lead">Search and generate all the GIFs you could ever imagine! </p>
+                <p class="sub-lead">Powered by the popular GIPHY API</p>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" id="mainContainer">
             <div class="row">
                 <!--buttons and GIF container-->
                 <div class="col-9">
@@ -35,7 +36,7 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h3>Search Your Own GIFs</h3>
+                            <h3>Custom GIF Search</h3>
                             <br>
                             <form id="search">
                                 <input type="text" id="search-input">

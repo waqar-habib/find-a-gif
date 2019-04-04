@@ -11,7 +11,7 @@ function showButtons() {
     $('#buttons').empty();
     for (let index = 0; index < queries.length; index++) {
         var button = $('<button>');
-        button.addClass("btn btn-primary mr-2 ml-2 mt-3");
+        button.addClass("btn btn-light mr-2 ml-2 mt-3");
         button.attr("data-name", queries[index]);
         button.text(queries[index]);
         $("#buttons").append(button);
@@ -64,17 +64,18 @@ $('#buttons').unbind('click').on('click', 'button', function(){
             // For each result write the data in #images div
             for (let index = 0; index < results.length; index++) {
                 var gifDiv = $('<div>');
-                gifDiv.addClass('d-flex pt-3 pb-3 mb-3 mt-3 pl-2')
+                gifDiv.addClass('d-flex pt-3 pb-3 mb-3 mt-3 pl-2');
                 // Write rating in an h3 tag
                 var gifRating = $('<h3>');
-                // Add padding
-                gifRating.addClass('pr-2 pl-4').text("Rating: " + results[index].rating);
+                // Add padding, make rating upperCase
+                gifRating.addClass('pr-2 pl-4 upperCase').text("Rating: " + results[index].rating);
                 // Write title in an h2 tag
                 var gifTitle = $('<h2>');
                 // Add padding
                 gifTitle.addClass('pr-2 pl-4').text("Title: " + results[index].title);
                 // Add still image URL
-                var gifImage = $('<img>').attr('src', results[index].images.fixed_height_still.url);
+                var gifImage = $('<img>').addClass('imgBorder');
+                gifImage.attr('src', results[index].images.fixed_height_still.url);
                 gifImage.attr('data-still', results[index].images.fixed_height_still.url);
                 // Add animated image URL
                 gifImage.attr('data-animate', results[index].images.fixed_height.url);

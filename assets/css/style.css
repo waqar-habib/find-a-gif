@@ -1,8 +1,45 @@
-h1 {
-    font: 50px Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    line-height: 20px;
+body {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #6f2232;
     
-  
-  }
+}
 
+.jumbotron {
+    background-color: #000000;
+    height: 350px;
+}
+
+.display-4 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5rem;
+    color: #950740;
+    text-align: center;
+}
+
+.lead {
+    font-size: 2.1rem;
+    color: #ffffff;
+    line-height: 3rem;
+}
+
+.sub-lead {
+    font-size: 1.3rem;
+    color: #ffffff;
+    line-height: 3rem;
+}
+
+.imgBorder {
+    border-width: 5px;
+    border-style: solid;
+}
+
+.card {
+    background: #4E4E50;
+    border: none;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
