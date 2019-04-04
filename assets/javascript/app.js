@@ -1,6 +1,6 @@
-// Make an array where the initial TV Show list lives and where the users can add their own custom TV Shows
+// Make an array where the initial GIFs live and where the users can add their own custom GIFs
 
-var queries = ["F.R.I.E.N.D.S.", "Grey's Anatomy", "Game of Thrones", "Silicon Valley", "The Office", "Psych"];
+var queries = ["F.R.I.E.N.D.S.", "Grey's Anatomy", "Game of Thrones", "Silicon Valley", "The Office", "Psych", "Brooklyn 99", "SRK"];
 
 var APIkey = "Lv2Iv9O3CbxQx8uMpMRgoO0lAbAJTkUu";
 
@@ -90,25 +90,23 @@ $('#buttons').unbind('click').on('click', 'button', function(){
                 // Make an on-click event to play/pause the GIFs
             
                 gifImage.on('click', function(){
-                    
+                    // Create var to store the current data-state
                     var state = $(this).attr("data-state");
+                    // If/else statement checks if state is still
                     if (state === "still"){
+                        // If still change image src to data-animate
                         $(this).attr('src', $(this).attr("data-animate"));
+                        // And set the data-state to animate
                         $(this).attr('data-state', 'animate');
                     } else {
+                        // else, change image src to data-still
                         $(this).attr('src', $(this).attr('data-still'));
+                        // and set the data-state to still
                         $(this).attr('data-state', 'still');
                     }
-                    
-                });
+              });
      
             }
-        
-
-
-
         });
-
 });
-
 });
