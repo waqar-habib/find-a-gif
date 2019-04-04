@@ -11,7 +11,7 @@ function showButtons() {
     $('#buttons').empty();
     for (let index = 0; index < queries.length; index++) {
         var button = $('<button>');
-        button.addClass("btn btn-primary mr-2 ml-2");
+        button.addClass("btn btn-primary mr-2 ml-2 mt-3");
         button.attr("data-name", queries[index]);
         button.text(queries[index]);
         $("#buttons").append(button);
@@ -29,7 +29,7 @@ $('button').on('click', function(){
 
     // Create a var queryURL using the tvShowName 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShowName + "&api_key=" + APIkey + "&limit=8";
-    console.log(queryURL); //pulls 8 GIFs for each TV show in the array. 
+    //console.log(queryURL); //pulls 8 GIFs for each TV show in the array. 
     
     // Make an AJAX call using queryURL
     $.ajax({
@@ -38,7 +38,7 @@ $('button').on('click', function(){
     })
         // Using the data from the AJAX request in a .then function
         .then(function(response){
-            console.log(response); 
+            //console.log(response); 
             
             // Store the response in var results
             var results = response.data;
@@ -59,11 +59,28 @@ $('button').on('click', function(){
 
         });
 
-
-
 });
 
+// Make an on click function for search button
+// Added .unbind because it was firing twice for some reason
+$('#searchButton').unbind('click').on('click', function(){
+    event.preventDefault();
+    //alert('click'); //search-button works!
+    $('#images').empty();
+    // Take the user input from search box and add it to the query array
+    var input = $('#search-input').val().trim();
+    queries.push(input);
+    //console.log(queries); //works!
 
+
+
+
+
+
+
+    // Make a new button using the user input
+    showButtons();
+});
 
 
 
