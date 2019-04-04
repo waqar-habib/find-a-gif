@@ -73,8 +73,9 @@ $('#buttons').unbind('click').on('click', 'button', function(){
                 var gifTitle = $('<h2>');
                 // Add padding
                 gifTitle.addClass('pr-2 pl-4').text("Title: " + results[index].title);
-                // Add still image URL
+                // Add white border around images
                 var gifImage = $('<img>').addClass('imgBorder');
+                // Add still image URL
                 gifImage.attr('src', results[index].images.fixed_height_still.url);
                 gifImage.attr('data-still', results[index].images.fixed_height_still.url);
                 // Add animated image URL
